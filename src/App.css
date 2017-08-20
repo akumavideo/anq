@@ -1,3 +1,64 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.trigger:hover {
+  color: #108ee9;
+}
+
+.sider {
+  width: 224px;
+  background: #404040;
+  overflow: visible;
+  padding-bottom: 24px;
+  height: 100vh;
+  transition: all 0.3s ease-out;
+  box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.01);
+  color: #999;
+}
+
+.light {
+  background: #fff;
+}
+
+.switchtheme {
+  background: #fff;
+  border-top: solid 1px #f8f8f8;
+}
+
+.logo {
+  text-align: center;
+  height: 40px;
+  line-height: 45px;
+  cursor: pointer;
+  margin: 28px 0;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.logo span {
+  vertical-align: text-bottom;
+  font-size: 25px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.logo .anticon {
+  transition: all 0.3s ease-out;
 }
