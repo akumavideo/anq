@@ -4,9 +4,20 @@
   text-align: center;
 }
 
+.header {
+  border: none;
+  display: inline-block;
+  /*box-shadow: @shadow-2;*/
+  position: relative;
+  justify-content: space-between;
+  height: 47px;
+  background-color: #fff;
+  z-index: 999;
+}
+
 .trigger {
   font-size: 18px;
-  line-height: 64px;
+  line-height: 47px;
   padding: 0 16px;
   cursor: pointer;
   transition: color .3s;
