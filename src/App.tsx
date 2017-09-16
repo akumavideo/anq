@@ -12,21 +12,21 @@ class App extends React.Component {
   };
   toggle = () => {
     this.setState({
-      collapsed: !this.state.collapsed,
+      collapsed: !this.state.collapsed
     });
-  };
+  }
 
   render() {
     return (
       <Layout>
         <Sider
           trigger={null}
-          collapsible
+          collapsible={true}
           collapsed={this.state.collapsed}
-          className='sider'
+          className="sider"
         >
           <div className="logo">
-            <img alt={'logo'} src='/logo.png'/>
+            <img alt={'logo'} src="/logo.png"/>
             <span>ANQ</span>
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
@@ -56,7 +56,7 @@ class App extends React.Component {
               />
               <span style={{ marginRight: '16px' }}>
                 <Menu mode="horizontal">
-                  <SubMenu style={{float: 'right',}} title={<span><Icon type="user"/>devilune</span>}>
+                  <SubMenu style={{float: 'right'}} title={<span><Icon type="user"/>devilune</span>}>
                     <Menu.Item key="logout"><a href="/">Sign out</a></Menu.Item>
                   </SubMenu>
                 </Menu>
@@ -68,9 +68,10 @@ class App extends React.Component {
           </Content>
           <Footer style={{ textAlign: 'center', padding: '0px 50px 24px' }}>
             <div>ANQ ©2017 Created by <a href="https://github.com/devilune">devilune</a></div>
-            <div>Writing graphic by <a href="http://www.flaticon.com/authors/freepik">freepik</a> from <a
-              href="http://www.flaticon.com/">Flaticon</a> is licensed under <a
-              href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Check
+            <div>Writing graphic by
+              <a href="http://www.flaticon.com/authors/freepik">freepik</a>
+              from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under
+              <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Check
               out the new logo that I created on <a href="http://logomakr.com" title="Logo Maker">LogoMaker.com</a>
               &nbsp;https://logomakr.com/0zuhvC0zuhvC
             </div>
