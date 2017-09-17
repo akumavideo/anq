@@ -2,6 +2,11 @@ import * as React from 'react';
 import { Icon, Menu, Layout } from 'antd/lib';
 import './App.css';
 import Row from 'antd/lib/grid/row';
+import { Link } from 'react-router-dom';
+import Dashboard from './containers/Dashboard/Dashboard';
+import { Redirect, Route } from 'react-router';
+import SurveyList from './containers/SurveyList/SurveyList';
+import UserList from './containers/Admin/UserList/UserList';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -26,20 +31,24 @@ class App extends React.Component {
           className="sider"
         >
           <div className="logo">
+            <Link to={'/dashboard'}/>
             <img alt={'logo'} src="/logo.png"/>
             <span>ANQ</span>
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">
+              <Link to={'/dashboard'}/>
               <Icon type="laptop"/>
               <span>Dashboard</span>
             </Menu.Item>
             <Menu.Item key="2">
+              <Link to={'/surveys'}/>
               <Icon type="edit"/>
               <span>Survey List</span>
             </Menu.Item>
             <SubMenu key="sub1" title={<span><Icon type="tool"/>{this.state.collapsed ? '' : 'Admin'}</span>}>
               <Menu.Item key="3">
+                <Link to={'/users'}/>
                 <Icon type="user"/>
                 User List
               </Menu.Item>
@@ -64,7 +73,10 @@ class App extends React.Component {
             </Row>
           </Header>
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-            Content
+            <Route exact={true} path="/" render={() => (<Redirect to="/dashboard"/>)}/>
+            <Route path="/dashboard" component={Dashboard}/>
+            <Route path="/surveys" component={SurveyList}/>
+            <Route path="/users" component={UserList}/>
           </Content>
           <Footer style={{ textAlign: 'center', padding: '0px 50px 24px' }}>
             <div>ANQ ©2017 Created by <a href="https://github.com/devilune">devilune</a></div>
