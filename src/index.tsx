@@ -7,6 +7,20 @@ import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 import './index.css';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import ja from 'react-intl/locale-data/ja';
+import Messages from './Messages';
+
+addLocaleData([...en, ...ja]);
+
+const userLocale = (window.navigator.languages && window.navigator.languages[0]) ||
+  window.navigator.language;
+// TODO: https://qiita.com/shogo82148/items/548a6c9904eb19269f8c
+// const userLocale = (window.navigator.languages && window.navigator.languages[0]) ||
+//   window.navigator.language ||
+//   window.navigator.userLanguage ||
+//   window.navigator.browserLanguage;
 
 interface AppState {
 }
@@ -23,9 +37,14 @@ const store = createStore<AppState>(
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <App/>
-    </ConnectedRouter>
+    <IntlProvider
+      locale={userLocale}
+      messages={Messages[userLocale]}
+    >
+      <ConnectedRouter history={history}>
+        <App/>
+      </ConnectedRouter>
+    </IntlProvider>
   </Provider>,
   document.getElementById('root') as HTMLElement
 );
