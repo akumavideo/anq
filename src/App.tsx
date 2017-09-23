@@ -7,6 +7,7 @@ import Dashboard from './containers/Dashboard/Dashboard';
 import { Redirect, Route } from 'react-router';
 import SurveyList from './containers/SurveyList/SurveyList';
 import UserList from './containers/Admin/UserList/UserList';
+import { FormattedMessage } from 'react-intl';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -39,18 +40,27 @@ class App extends React.Component {
             <Menu.Item key="1">
               <Link to={'/dashboard'}/>
               <Icon type="laptop"/>
-              <span>Dashboard</span>
+              <span>
+                <FormattedMessage id="page.title.dashboard" />
+              </span>
             </Menu.Item>
             <Menu.Item key="2">
               <Link to={'/surveys'}/>
               <Icon type="edit"/>
-              <span>Survey List</span>
+              <span><FormattedMessage id="page.title.survey-list" /></span>
             </Menu.Item>
-            <SubMenu key="sub1" title={<span><Icon type="tool"/>{this.state.collapsed ? '' : 'Admin'}</span>}>
+            <SubMenu
+              key="sub1"
+              title={
+                <span>
+                  <Icon type="tool"/>
+                  {this.state.collapsed ? '' : <FormattedMessage id="page.title.admin" />}
+                </span>}
+            >
               <Menu.Item key="3">
                 <Link to={'/users'}/>
                 <Icon type="user"/>
-                User List
+                <FormattedMessage id="page.title.user-list" />
               </Menu.Item>
             </SubMenu>
           </Menu>
