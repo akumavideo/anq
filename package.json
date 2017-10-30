@@ -12,13 +12,15 @@
     "@types/react-router-dom": "^4.0.7",
     "@types/react-router-redux": "^5.0.8",
     "antd": "^2.12.6",
+    "material-ui": "^1.0.0-beta.12",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-intl": "^2.4.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.6",
-    "react-scripts-ts": "2.6.0"
+    "react-scripts-ts": "2.6.0",
+    "typeface-roboto": "^0.0.35"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -29,10 +31,10 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@types/storybook__addon-actions": "^3.0.1",
-    "@types/storybook__react": "^3.0.5",
-    "@storybook/react": "^3.2.10",
     "@storybook/addon-actions": "^3.2.10",
-    "@storybook/addon-links": "^3.2.10"
+    "@storybook/addon-links": "^3.2.10",
+    "@storybook/react": "^3.2.10",
+    "@types/storybook__addon-actions": "^3.0.1",
+    "@types/storybook__react": "^3.0.5"
   }
 }

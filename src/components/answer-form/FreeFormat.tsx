@@ -1,26 +1,47 @@
 import * as React from 'react';
-import FormItem from 'antd/lib/form/FormItem';
-import TextArea from 'antd/lib/input/TextArea';
+import 'typeface-roboto';
+import TextField from 'material-ui/TextField';
+import {
+  withStyles,
+  WithStyles,
+  Theme,
+} from 'material-ui/styles';
 
-import 'antd/dist/antd.css';
-import 'antd/lib/input/style/index.css';
+type ComponentClassNames = 'root';
 
-export interface Props {
+export interface FreeFormatProps {
   label: string;
   text: string;
 }
 
-export const FreeFormat: React.SFC<Props> = (props) => {
-  const { label, text } = props;
+const styles = (theme: Theme) => ({
+  root: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 500,
+    textField: {
+      marginLeft: theme.spacing.unit,
+      marginRight: theme.spacing.unit,
+      width: 200,
+    },
+  },
+});
+
+const FreeFormat: React.SFC<FreeFormatProps & WithStyles<ComponentClassNames>> = ({classes, label, text}) => {
 
   return (
-    <FormItem label={label} >
-      <TextArea
-        rows={5}
-        cols={1}
+    <form>
+      <TextField
+        id="multiline-static"
+        label={label}
+        multiline={true}
+        rows="10"
+        className={classes.root}
         defaultValue={text}
-        placeholder={'自由入力欄'}
+        margin="normal"
       />
-    </FormItem>
+    </form>
   );
 };
+
+export default withStyles(styles)(FreeFormat);
