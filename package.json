@@ -1,38 +1,34 @@
 {
-  "name": "anq",
+  "name": "anq-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "^20.0.7",
-    "@types/node": "^8.0.22",
-    "@types/react": "^16.0.2",
-    "@types/react-dom": "^15.5.3",
-    "@types/react-intl": "^2.3.1",
-    "@types/react-redux": "^5.0.8",
-    "@types/react-router-dom": "^4.0.7",
-    "@types/react-router-redux": "^5.0.8",
-    "antd": "^2.12.6",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-intl": "^2.4.0",
+    "@types/classnames": "^2.2.3",
+    "@types/next": "^2.4.6",
+    "@types/nprogress": "^0.0.29",
+    "@types/react-redux": "^5.0.13",
+    "classnames": "^2.2.5",
+    "material-ui": "next",
+    "material-ui-icons": "^1.0.0-beta.17",
+    "next": "^4.1.4",
+    "nprogress": "^0.2.0",
+    "react": "latest",
+    "react-dom": "latest",
     "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "^5.0.0-alpha.6",
-    "react-scripts-ts": "2.6.0"
+    "react-scripts-ts": "latest",
+    "recompose": "^0.26.0"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/recompose": "^0.24.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "devDependencies": {
-    "@types/storybook__addon-actions": "^3.0.1",
-    "@types/storybook__react": "^3.0.5",
-    "@storybook/react": "^3.2.10",
-    "@storybook/addon-actions": "^3.2.10",
-    "@storybook/addon-links": "^3.2.10"
+    "eject": "react-scripts-ts eject"
   }
 }

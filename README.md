@@ -1,3 +1,9 @@
-# ANQ
+# anq-client
 
-Pronounced *an-queue*.
+## How to use
+
+Install it and run:
+
+```bash
+yarn start
+```

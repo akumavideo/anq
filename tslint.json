@@ -19,6 +19,7 @@
         "indent": [ true, "spaces" ],
         "interface-name": [true, "never-prefix"],
         "jsdoc-format": true,
+        "jsx-boolean-value": false,
         "jsx-no-lambda": false,
         "jsx-no-multiline-js": false,
         "label-position": true,
@@ -29,7 +30,7 @@
             "static-before-instance",
             "variables-before-functions"
         ],
-        "no-any": true,
+        "no-any": false,
         "no-arg": true,
         "no-bitwise": true,
         "no-console": [
@@ -53,7 +54,7 @@
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": false,
         "no-unused-expression": true,
-        "no-use-before-declare": true,
+        "no-use-before-declare": false,
         "one-line": [
             true,
             "check-catch",
@@ -63,10 +64,10 @@
         ],
         "quotemark": [true, "single", "jsx-double"],
         "radix": true,
-        "semicolon": [true, "always"],
+        "semicolon": [true, "always", "ignore-bound-class-methods"],
         "switch-default": true,
 
-        "trailing-comma": false,
+        "trailing-comma": [false],
 
         "triple-equals": [ true, "allow-null-check" ],
         "typedef": [
