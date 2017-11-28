@@ -1,3 +1,0 @@
-# ANQ
-
-Pronounced *an-queue*.
