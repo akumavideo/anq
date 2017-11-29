@@ -1,5 +1,4 @@
 import * as React from 'react';
-import 'typeface-roboto';
 import TextField from 'material-ui/TextField';
 import {
   withStyles,

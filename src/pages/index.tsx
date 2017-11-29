@@ -1,69 +1,31 @@
 import * as React from 'react';
-import Button from 'material-ui/Button';
-import Dialog, {
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-} from 'material-ui/Dialog';
-import Typography from 'material-ui/Typography';
-import withStyles, { WithStyles } from 'material-ui/styles/withStyles';
 import withRoot from '../components/withRoot';
-import { log } from 'util';
+import { WithStyles } from 'material-ui';
+import withStyles from 'material-ui/styles/withStyles';
+import FreeFormat from '../components/FreeFormat';
+import Typography from 'material-ui/Typography';
 
 const styles = {
   root: {
     textAlign: 'center',
-    paddingTop: 200,
+    paper: {
+      paddingTop: 16,
+      paddingBottom: 16,
+      width: 200,
+      // marginTop: theme.spacing.unit * 3,
+    }
   },
 };
 type ClassNames = keyof typeof styles;
-log(typeof styles);
 
-type State = {
-  open: boolean,
-};
-
-class Index extends React.Component<WithStyles<ClassNames>, State> {
-  state = {
-    open: false,
-  };
-
-  handleRequestClose = () => {
-    this.setState({
-      open: false,
-    });
-  };
-
-  handleClick = () => {
-    this.setState({
-      open: true,
-    });
-  };
-
+class Index extends React.Component<WithStyles<ClassNames>, any> {
   render() {
     return (
       <div className={this.props.classes.root}>
-        <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
-          <DialogTitle>Super Secret Password</DialogTitle>
-          <DialogContent>
-            <DialogContentText>{this.props.classes.root}</DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button color="primary" onClick={this.handleRequestClose}>
-              OK
-            </Button>
-          </DialogActions>
-        </Dialog>
-        <Typography type="display1" gutterBottom>
-          Material-UI
+        <Typography type={'display2'} gutterBottom>
+          2017年度社員旅行アンケート
         </Typography>
-        <Typography type="subheading" gutterBottom>
-          example project
-        </Typography>
-        <Button raised color="accent" onClick={this.handleClick}>
-          Super Secret Password
-        </Button>
+          <FreeFormat label={'今年の社員旅行の感想をお聞かせください'} text={''} />
       </div>
     );
   }
