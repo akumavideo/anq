@@ -68,7 +68,7 @@ const styles = (theme: any) => ({
         top: 0,
         height: 2,
         boxShadow: `${
-          theme.palette.type === 'light' ? theme.palette.common.black : theme.palette.common.white
+          theme.palette.common.black
           } 1px 0 6px 1px`,
         borderRadius: '100%',
         animation: 'nprogress-pulse 2s ease-out 0s infinite',
@@ -150,7 +150,7 @@ class AppFrame extends React.Component<any, any> {
   render() {
     // const {children, classes, uiTheme} = this.props;
     const {children, classes} = this.props;
-    const title = 'NPCアンケートアプリ';
+    const title = 'NPCアンケート';
 
     // let disablePermanent = false;
     let navIconClassName = '';
@@ -197,7 +197,7 @@ class AppFrame extends React.Component<any, any> {
         </AppBar>
         <AppDrawer
           className={classes.drawer}
-          onRequestClose={this.handleDrawerToggle}
+          onClose={this.handleDrawerToggle}
           mobileOpen={this.state.mobileOpen}
         />
         {children}

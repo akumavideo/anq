@@ -42,7 +42,7 @@ type ClassNames = keyof typeof styles;
 
 // function AppDrawer(props: any, context: any) {
 function AppDrawer(props: any) {
-  const {classes, className, disablePermanent, mobileOpen, onRequestClose} = props;
+  const {classes, className, disablePermanent, mobileOpen, onClose} = props;
 
   return (
     <div className={className}>
@@ -53,7 +53,7 @@ function AppDrawer(props: any) {
           }}
           type="temporary"
           open={mobileOpen}
-          onRequestClose={onRequestClose}
+          onClose={onClose}
         >
           <div>
             <ListItem button>

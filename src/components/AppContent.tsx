@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
-import { withStyles } from 'material-ui/styles';
+import { Theme, withStyles } from 'material-ui/styles';
 
-const styles = (theme: any) => ({
+const styles = (theme: Theme) => ({
   content: theme.mixins.gutters({
     paddingTop: 80,
     flex: '1 1 100%',
@@ -11,7 +11,7 @@ const styles = (theme: any) => ({
   }),
   [theme.breakpoints.up(900 + theme.spacing.unit * 6)]: {
     content: {
-      maxWidth: 900,
+      maxWidth: 750,
     },
   },
 });

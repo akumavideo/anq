@@ -44,7 +44,7 @@ class Index extends React.Component<WithStyles<ClassNames>, State> {
   render() {
     return (
       <div className={this.props.classes.root}>
-        <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
+        <Dialog open={this.state.open} onClose={this.handleRequestClose}>
           <DialogTitle>Super Secret Password</DialogTitle>
           <DialogContent>
             <DialogContentText>{this.props.classes.root}</DialogContentText>
